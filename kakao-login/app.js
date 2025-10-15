@@ -33,7 +33,7 @@ const client_id =
 const client_secret =
   process.env.KAKAO_CLIENT_SECRET || '2QhUCBnr3LSRZlqrAbmcca8B8ydl5HJN'; // 카카오 Client Secret
 const domain = process.env.DOMAIN || 'http://localhost:3000'; // 현재 서비스 도메인
-const redirect_uri = process.env.KAKAO_REDIRECT_URI || `${domain}/redirect`; // 로그인 후 되돌아올 redirect URI
+const redirect_uri = process.env.KAKAO_REDIRECT_URI; // 로그인 후 되돌아올 redirect URI
 const token_uri =
   process.env.KAKAO_TOKEN_URI || 'https://kauth.kakao.com/oauth/token'; // 토큰 요청 주소
 const api_host = process.env.KAKAO_API_HOST || 'https://kapi.kakao.com'; // 사용자 정보 API 주소

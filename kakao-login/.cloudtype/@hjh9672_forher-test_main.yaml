@@ -1,5 +1,6 @@
 name: forher-test
 app: node@22
+root: ./
 options:
   install: npm install
   start: node app.js

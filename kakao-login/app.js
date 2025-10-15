@@ -8,7 +8,7 @@ const mysql = require('mysql2/promise'); // MySQL 연결 (Promise 기반)
 require('dotenv').config(); // .env 환경변수 사용을 위해 추가
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`🚀 Server running on port ${port}`));
 
 // 정적 파일 서빙 설정 추가
@@ -32,7 +32,7 @@ const client_id =
   process.env.KAKAO_CLIENT_ID || '5a1cd175986f8f7e5c8828ea09bb0e7e'; // 카카오 REST API 키
 const client_secret =
   process.env.KAKAO_CLIENT_SECRET || '2QhUCBnr3LSRZlqrAbmcca8B8ydl5HJN'; // 카카오 Client Secret
-const domain = process.env.DOMAIN || 'http://localhost:4000'; // 현재 서비스 도메인
+const domain = process.env.DOMAIN || 'http://localhost:3000'; // 현재 서비스 도메인
 const redirect_uri = process.env.KAKAO_REDIRECT_URI || `${domain}/redirect`; // 로그인 후 되돌아올 redirect URI
 const token_uri =
   process.env.KAKAO_TOKEN_URI || 'https://kauth.kakao.com/oauth/token'; // 토큰 요청 주소

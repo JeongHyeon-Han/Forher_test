@@ -112,7 +112,7 @@ app.get("/profile", async function (req, res) {
   };
 
   const rtn = await call("POST", uri, param, header); // 카카오 API에 요청 전송
-  console.log(rtn);
+  console.log(rtn); // 조회된 사용자 정보 콘솔에 출력
 
   res.send(rtn); // 조회한 사용자 정보를 클라이언트에 반환
 });

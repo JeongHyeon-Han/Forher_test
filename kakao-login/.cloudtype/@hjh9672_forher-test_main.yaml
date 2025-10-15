@@ -1,6 +1,6 @@
 name: forher-test
 app: node@22
-root: ./
+root: ./kakao-login
 options:
   install: npm install
   start: node app.js

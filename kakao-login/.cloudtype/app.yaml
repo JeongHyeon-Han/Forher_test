@@ -31,3 +31,4 @@ context:
   git:
     url: https://github.com/JeongHyeon-Han/Forher_test.git
     branch: master
+    path: kakao-login

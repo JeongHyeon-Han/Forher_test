@@ -8,7 +8,8 @@ const mysql = require("mysql2/promise"); // MySQL 연결 (Promise 기반)
 require("dotenv").config(); // .env 환경변수 사용을 위해 추가
 
 const app = express();
-const port = process.env.PORT || 4000; // 서버 포트 번호 (.env로 분리 가능)
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log(`🚀 Server running on port ${port}`));
 
 // 정적 파일 서빙 설정 추가
 app.use(express.static(__dirname));

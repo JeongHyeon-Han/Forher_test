@@ -4,6 +4,9 @@ options:
   git:
     branch: main
     url: https://github.com/JeongHyeon-Han/Forher_test.git
+
+  build:
+    context: ../
   env:
     - name: NODE_ENV
       value: production

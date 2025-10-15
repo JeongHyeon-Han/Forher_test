@@ -57,7 +57,7 @@ async function call(method, uri, param, header) {
 }
 
 // 카카오 인증 서버로 인가 코드 발급 요청
-app.get("/authorize", function (req, res) {
+app.get("/authorize", async function (req, res) {
   // 선택: 사용자에게 추가 동의를 요청하는 경우, scope 값으로 동의항목 ID를 전달
   // 친구 목록, 메시지 전송 기능의 경우, 추가 기능 신청 필요
   // (예: /authorize?scope=friends,talk_message)
@@ -66,6 +66,7 @@ app.get("/authorize", function (req, res) {
   if (scope) {
     scopeParam = "&scope=" + scope;
   }
+  console.log("scope:", scopeParam);
 
   // 카카오 인증 서버로 리다이렉트
   // 사용자 동의 후 리다이렉트 URI로 인가 코드가 전달
@@ -110,6 +111,7 @@ app.get("/profile", async function (req, res) {
   };
 
   const rtn = await call("POST", uri, param, header); // 카카오 API에 요청 전송
+  console.log(rtn);
 
   res.send(rtn); // 조회한 사용자 정보를 클라이언트에 반환
 });
